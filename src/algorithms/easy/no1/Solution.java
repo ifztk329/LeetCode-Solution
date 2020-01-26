@@ -67,3 +67,32 @@ class TwoPassHashTable {
         return null;
     }
 }
+
+/**
+ * One-pass Hash Table
+ */
+class OnePassHashTable {
+
+    /**
+     * 1 ms
+     * 41.8 MB
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>(nums.length);
+
+        for (int i = 0; i < nums.length; i++) {
+
+            int complement = target - nums[i];
+
+            if (map.containsKey(complement)) {
+                return new int[] {i, map.get(complement)};
+            } else {
+                map.put(nums[i], i);
+            }
+        }
+        return null;
+    }
+}
