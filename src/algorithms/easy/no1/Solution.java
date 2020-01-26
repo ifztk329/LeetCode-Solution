@@ -45,7 +45,7 @@ class BruteForce {
 class TwoPassHashTable {
     /**
      * 2 ms
-     * 41.8 MB	
+     * 41.8 MB
      * @param nums
      * @param target
      * @return
